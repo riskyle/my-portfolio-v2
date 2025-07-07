@@ -4,17 +4,16 @@ import { Button } from "@/components/ui/button";
 import supabase from "@/utils/supabase";
 
 const Hero = () => {
+  const IMAGE_PATH = import.meta.env.VITE_SUPABASE_BUCKET_URL;
   const [user, setUser] = useState({
     name: "Christian Kyle",
     title: "Software Engineer",
   });
-
-  const imagePath = import.meta.env.VITE_SUPABASE_BUCKET_URL;
-
+  const [links, setLinks] = useState<any>({});
   const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Linkedin, href: links.linkedin_link || "#", label: "LinkedIn" },
+    { icon: Github, href: links.github_link || "#", label: "GitHub" },
+    { icon: Twitter, href: links.twitter_link || "#", label: "Twitter" },
     { icon: Mail, href: "#contact", label: "Email" },
   ];
 
@@ -28,6 +27,7 @@ const Hero = () => {
         name: data.name,
         title: data.title,
       });
+      setLinks(data.links);
     } catch (error) {
       console.error("Error fetching user info:", error);
     }
@@ -86,7 +86,7 @@ const Hero = () => {
 
               <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-2xl">
                 <img
-                  src={`${imagePath}/profile-pic/main.png`}
+                  src={`${IMAGE_PATH}/profile-pic/main.png`}
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
