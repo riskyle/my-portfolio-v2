@@ -48,7 +48,7 @@ const Experience = () => {
                             {exp.company}
                           </p>
                         </div>
-                        <div className={`inline-flex px-4 py-2 rounded-full bg-gradient-to-r ${exp.color} text-white font-medium text-sm mt-2 lg:mt-0 w-fit`}>
+                        <div className={`inline-flex px-4 py-2 rounded-full bg-black text-white font-medium text-sm mt-2 lg:mt-0 w-fit`}>
                           {exp.period}
                         </div>
                       </div>
