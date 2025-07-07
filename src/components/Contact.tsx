@@ -51,16 +51,22 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, emailData, EMAILJS_PUBLIC_KEY)
-      .then((result) => {
-        console.log('SUCCESS!', result.text);
-        toast.success("Email sent successfully!");
-      })
-      .catch((error) => {
-        console.log('FAILED...', error);
-      })
-      .finally(() => {
-      });
+    if (!emailData.from_email || !emailData.subject || !emailData.message || !name.firstname || !name.lastname) {
+      toast.error("Please fill in all fields before sending.");
+      return;
+    }
+
+    try {
+      const result = await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, emailData, EMAILJS_PUBLIC_KEY);
+
+      if (result.status !== 200) {
+        throw new Error("Failed to send email");
+      }
+
+      toast.success("Email sent successfully!");
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
   }
 
   return (
