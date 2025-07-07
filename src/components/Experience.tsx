@@ -29,12 +29,12 @@ const Experience = () => {
         </div>
 
         <div className="relative">
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 to-purple-600 hidden md:block"></div>
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gray-600 to-black-600 hidden md:block"></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
               <div key={index} className="relative flex items-start">
-                <div className="hidden md:flex absolute left-6 w-4 h-4 bg-white border-4 border-blue-600 rounded-full"></div>
+                <div className="hidden md:flex absolute left-6 w-4 h-4 bg-white border-4 border-black rounded-full"></div>
 
                 <div className="md:ml-16 w-full">
                   <Card className="hover:shadow-lg transition-all duration-300 hover:scale-[1.02]">

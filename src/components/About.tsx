@@ -36,11 +36,11 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           <div className="relative flex justify-center lg:justify-start">
             <div className="relative">
-              <div className="absolute -top-8 -left-4 w-80 h-96 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-3xl transform rotate-0 opacity-90"></div>
+              <div className="absolute -top-0 -left-0 w-80 h-96 bg-gray-600 rounded-3xl transform rotate-12 opacity-90"></div>
 
-              <div className="relative z-10 w-72 h-80 bg-gray-200 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative z-10 w-80 h-96 bg-gray-200 rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src={`${imagePath}/profile-pic/about-me.jpg`}
+                  src={`${imagePath}/profile-pic/about-me-2.jpg`}
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />

@@ -93,12 +93,25 @@ export default {
 					'100%': {
 						transform: 'translateX(-50%)'
 					}
+				},
+				"wave": {
+					'0%, 100%': { 'background-position': '0% 50%' },
+					'50%': { 'background-position': '100% 50%' },
+				},
+				'wave-colors': {
+					'0%': { 'background-position': '0% 50%' },
+					'25%': { 'background-position': '100% 50%' },
+					'50%': { 'background-position': '200% 50%' },
+					'75%': { 'background-position': '100% 50%' },
+					'100%': { 'background-position': '0% 50%' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'scroll-left': 'scroll-left 30s linear infinite'
+				'scroll-left': 'scroll-left 30s linear infinite',
+				'wave': 'wave 3s ease-in-out infinite',
+				'wave-colors': 'wave-colors 4s ease-in-out infinite',
 			}
 		}
 	},

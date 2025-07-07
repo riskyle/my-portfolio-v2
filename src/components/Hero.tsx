@@ -38,6 +38,7 @@ const Hero = () => {
   }, []);
 
   return (
+
     <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -47,7 +48,7 @@ const Hero = () => {
                 <span className="text-gray-900">Hi There,</span>
                 <br />
                 <span className="text-gray-900">I'm </span>
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-gray-400 via-black bg-[length:400%_100%] animate-wave-colors to-white bg-clip-text text-transparent">
                   {user.name}
                 </span>
               </h1>
@@ -61,7 +62,7 @@ const Hero = () => {
 
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 sm:px-8 py-3 rounded-full font-semibold transition-all duration-200 hover:scale-105 w-full sm:w-auto"
+              className="bg-gradient-to-r from-gray-600 to-black-600 hover:from-white hover:to-gray-700 text-white px-6 sm:px-8 py-3 rounded-full font-semibold transition-all duration-200 hover:scale-105 w-full sm:w-auto"
             >
               My Curriculum Vitae
             </Button>
