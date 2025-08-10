@@ -9,15 +9,17 @@ import Contact from "@/components/Contact";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-      <Header />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Contact />
-    </div>
+    <>
+      <div className="">
+        <Header />
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
+      </div>
+    </>
   );
 };
 

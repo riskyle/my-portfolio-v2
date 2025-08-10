@@ -1,9 +1,18 @@
-
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Moon, Sun } from "lucide-react"
+import { useTheme } from "next-themes"
+import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { setTheme } = useTheme()
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -61,6 +70,7 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
+
             </nav>
           </div>
         )}
