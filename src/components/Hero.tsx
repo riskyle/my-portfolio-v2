@@ -56,7 +56,7 @@ const Hero = () => {
             chromaticAberration={0}
             dither={0}
             curvature={0.5}
-            tint="#ffffff"
+            tint="#8AA624"
             mouseReact={true}
             mouseStrength={1}
             pageLoadAnimation={true}
