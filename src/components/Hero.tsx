@@ -55,7 +55,7 @@ const Hero = () => {
             noiseAmp={1}
             chromaticAberration={0}
             dither={0}
-            curvature={0.7}
+            curvature={0.5}
             tint="#ffffff"
             mouseReact={true}
             mouseStrength={1}
