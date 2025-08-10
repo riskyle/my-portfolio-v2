@@ -55,11 +55,11 @@ const Hero = () => {
             noiseAmp={1}
             chromaticAberration={0}
             dither={0}
-            curvature={0}
+            curvature={0.7}
             tint="#ffffff"
             mouseReact={true}
-            mouseStrength={0.5}
-            pageLoadAnimation={false}
+            mouseStrength={1}
+            pageLoadAnimation={true}
             brightness={1}
           />
         </div>
